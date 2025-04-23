@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Joke Generator</title>
+  <style>
+    body {
+      background-color: #e0f7fa;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #00796b;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      background-color: #26a69a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .joke {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #004d40;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #00695c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Travel Joke Generator 🌍😂</h1>
+  <button onclick="tellJoke()">Tell me a joke</button>
+  <div class="joke" id="joke"></div>
+
+  <a href="scratch.html">⬅️ Back to Scratch Page</a>
+
+  <script>
+    const jokes = [
+      "Why don’t mountains ever get tired of hiking? Because they’re always peaking!",
+      "Why did the plane break up with the airport? It needed some space.",
+      "I told my suitcase we're not going on vacation. Now I'm dealing with emotional baggage.",
+      "What do you call a Mexican who lost his car? Carlos.",
+      "Why did the tourist bring a ladder to the Eiffel Tower? Because they heard the view was on another level!"
+    ];
+
+    function tellJoke() {
+      const joke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById('joke').textContent = joke;
+    }
+  </script>
+</body>
+</html>
